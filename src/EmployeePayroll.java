@@ -32,7 +32,17 @@ public class EmployeePayroll {
         int totalWage = computeEmployeeWage(WORKING_DAYS_PER_MONTH, MAX_WORKING_HOURS);
         System.out.println("Total Wage Calculated using Class Method: " + totalWage);
 
+        // UC 8: Compute Wages for Multiple Companies using a separate file
+        UC8_CompanyEmployeeWage companyWageCalculator = new UC8_CompanyEmployeeWage();
 
+        int totalWageForCompanyA = companyWageCalculator.computeEmployeeWageForCompany("Company A", 20, 20, 100);
+        System.out.println("Total Wage for Company A: " + totalWageForCompanyA);
+
+        int totalWageForCompanyB = companyWageCalculator.computeEmployeeWageForCompany("Company B", 25, 22, 120);
+        System.out.println("Total Wage for Company B: " + totalWageForCompanyB);
+
+        int totalWageForCompanyC = companyWageCalculator.computeEmployeeWageForCompany("Company C", 18, 25, 110);
+        System.out.println("Total Wage for Company C: " + totalWageForCompanyC);
     }
     // UC 1: Check Employee Attendance
     private static void checkEmployeeAttendance() {
